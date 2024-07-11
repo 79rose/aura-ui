@@ -41,18 +41,16 @@ module.exports = {
           'revert',
         ];
         const emoji = [
+          '🐳',
           '✨',
           '🐞',
           '📃',
-          '🚀',
           '🌈',
-          '🦄',
-          '🎈',
-          '🧪',
           '🔧',
-          '🐎',
-          '🐳',
           '↩',
+          '🐎',
+          '🦄',
+          '🧪',
         ];
         if (types.includes(type) || emoji.includes(type)) {
           return [true];
