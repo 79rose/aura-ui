@@ -1,0 +1,43 @@
+{
+  "name": "@auraui/input",
+  "version": "0.0.0",
+  "description": "auraui input component",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "leewahjoel",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79rose/aura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79rose/aura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "main": "./dist/auraui-input.umd.js",
+  "module": "./dist/auraui-input.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-input.umd.js",
+      "import": "./dist/auraui-input.mjs",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@auraui/shared": "workspace:^"
+  }
+}

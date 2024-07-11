@@ -1,0 +1,48 @@
+{
+  "name": "@auraui/ui",
+  "version": "0.0.0",
+  "description": "一款现代化风格的vue3组件库",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "leewahjoel",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79rose/aura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79rose/aura-ui/issues"
+  },
+  "scripts": {
+    "build:package": "vite build --mode package",
+    "build:full": "vite build --mode full",
+    "build:full-min": "vite build --mode full-min",
+    "build": "pnpm run build:package && pnpm run build:full && pnpm run build:full-min"
+  },
+  "main": "./dist/auraui-ui.umd.js",
+  "module": "./dist/auraui-ui.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-ui.umd.js",
+      "import": "./dist/auraui-ui.mjs",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@auraui/button": "workspace:^",
+    "@auraui/input": "workspace:^",
+    "@auraui/shared": "workspace:^"
+  },
+  "types": "./dist/src/index.d.ts"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@auraui/shared",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "leewahjoel",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79rose/aura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79rose/aura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/auraui-shared.umd.js",
+  "module": "./dist/auraui-shared.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-shared.umd.js",
+      "import": "./dist/auraui-shared.mjs",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.17.6",
+    "lodash": "^4.17.21"
+  }
+}

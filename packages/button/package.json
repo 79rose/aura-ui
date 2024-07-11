@@ -1,0 +1,43 @@
+{
+  "name": "@auraui/button",
+  "version": "0.0.0",
+  "description": "auraui button component",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "leewahjoel",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79rose/aura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79rose/aura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "main": "./dist/auraui-button.umd.js",
+  "module": "./dist/auraui-button.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-button.umd.js",
+      "import": "./dist/auraui-button.mjs",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@auraui/shared": "workspace:^"
+  }
+}
