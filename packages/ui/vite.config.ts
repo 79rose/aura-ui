@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { generateVueConfig } from '../build/build.config';
+import { generateVueConfig } from '../build/scripts';
 
 type Mode = 'package' | 'full' | 'full-min';
 
