@@ -39,7 +39,8 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "@types/lodash": "^4.17.6",
+    "@auraui/shared": "file:",
+    "@types/lodash": "^4.17.7",
     "lodash": "^4.17.21"
   }
 }

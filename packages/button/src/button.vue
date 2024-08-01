@@ -1,21 +1,35 @@
 <script setup lang="ts">
-import { hello } from '@auraui/shared';
+import { computed } from 'vue';
+import { defaultButtonProps, ButtonProps } from './button';
 
-const props = withDefaults(defineProps<{
-  text?: string;
-}>(), {
-  text: 'World',
+const praus = withDefaults(
+  defineProps<ButtonProps>(),
+  defaultButtonProps(),
+);
+
+const classes = computed(() => {
+  const result: string[] = [];
+  if (praus.type) {
+    result.push(`au-button--${praus.type}`);
+  }
+
+  if (praus.plain) {
+    result.push('au-button--plain');
+  }
+
+  if (praus.disabled) {
+    result.push('au-button--disabled');
+  }
+
+  return result;
 });
 
-function clickHandler() {
-  hello(props.text);
-}
 </script>
 
 <template>
   <button
-    class="aura-button"
-    @click="clickHandler"
+    class="au-button"
+    :class="classes"
   >
     <slot />
   </button>

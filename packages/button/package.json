@@ -28,7 +28,9 @@
       "require": "./dist/auraui-button.umd.js",
       "import": "./dist/auraui-button.mjs",
       "types": "./dist/src/index.d.ts"
-    }
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist",
