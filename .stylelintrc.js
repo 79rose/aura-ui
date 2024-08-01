@@ -13,8 +13,8 @@ module.exports = {
   ],
   rules: {
     // 自定义规则集的启用 / 禁用
-    // 'stylistic/max-line-length': null,
-    'stylistic/max-line-length': 100,
+    'stylistic/max-line-length': null,
+    // 'stylistic/max-line-length': 100,
     '@stylistic/color-hex-case': 'lower',
     '@stylistic/number-leading-zero': 'always',
     '@stylistic/unit-case': 'lower',

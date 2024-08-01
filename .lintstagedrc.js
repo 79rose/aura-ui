@@ -5,7 +5,7 @@ module.exports = {
   ],
   // 对于 css scss 文件，应用 stylelint
   '**/*.{scss,css}': [
-    'stylelint --fix',
+    'stylelint --fix --allow-empty-input',
   ],
   // Vue 文件由于同时包含模板、样式、脚本，因此 eslint、stylelint 都要使用
   '**/*.vue': [
