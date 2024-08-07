@@ -1,0 +1,11 @@
+{
+  "name": "@auraui/demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@auraui/ui": "workspace:^"
+  },
+  "devDependencies": {}
+}

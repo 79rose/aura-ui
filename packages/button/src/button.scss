@@ -1,0 +1,90 @@
+$button-types: primary, success, warning, danger, info;
+
+@mixin button-type-styles() {
+  @each $type in $button-types {
+    &.au-button--#{$type} {
+      --au-button-color: rgb(var(--au-color-reverse));
+      --au-button-bg-color: rgb(var(--au-color-#{$type}));
+      --au-button-border-color: rgb(var(--au-color-#{$type}));
+      --au-button-hover-color: rgb(var(--au-color-reverse));
+      --au-button-hover-bg-color: rgb(var(--au-color-#{$type}-light-3));
+      --au-button-hover-border-color: rgb(var(--au-color-#{$type}-light-3));
+      --au-button-active-color: rgb(var(--au-color-reverse));
+      --au-button-active-bg-color: rgb(var(--au-color-#{$type}-dark-2));
+      --au-button-active-border-color: rgb(var(--au-color-#{$type}-dark-2));
+      --au-button-disabled-color: rgb(var(--au-color-reverse));
+      --au-button-disabled-bg-color: rgb(var(--au-color-#{$type}-light-5));
+      --au-button-disabled-border-color: rgb(var(--au-color-#{$type}-light-5));
+    }
+  }
+}
+
+@mixin button-plain-styles() {
+  @each $type in $button-types {
+    &.au-button--#{$type} {
+      --au-button-color: rgb(var(--au-color-#{$type}));
+      --au-button-bg-color: rgb(var(--au-color-#{$type}-light-9));
+      --au-button-border-color: rgb(var(--au-color-#{$type}-light-5));
+      --au-button-hover-color: rgb(var(--au-color-reverse));
+      --au-button-hover-bg-color: rgb(var(--au-color-#{$type}));
+      --au-button-hover-border-color: rgb(var(--au-color-#{$type}));
+      --au-button-disabled-color: rgb(var(--au-color-#{$type}-light-5));
+      --au-button-disabled-bg-color: rgb(var(--au-color-#{$type}-light-9));
+      --au-button-disabled-border-color: rgb(var(--au-color-#{$type}-light-8));
+    }
+  }
+}
+
+.au-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--au-button-padding-y) var(--au-button-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--au-button-color);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--au-button-bg-color);
+  border-color: var(--au-button-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+
+  &:hover {
+    color: var(--au-button-hover-color);
+    background-color: var(--au-button-hover-bg-color);
+    border-color: var(--au-button-hover-border-color);
+  }
+
+  &:active {
+    color: var(--au-button-active-color);
+    background-color: var(--au-button-active-bg-color);
+    border-color: var(--au-button-active-border-color);
+  }
+
+  @include button-type-styles;
+
+  &.au-button--plain {
+    --au-button-hover-color: rgb(var(--au-color-primary));
+    --au-button-hover-bg-color: rgb(var(--au-color-card));
+    --au-button-hover-border-color: rgb(var(--color-primary));
+
+    @include button-plain-styles;
+  }
+
+  &.au-button--disabled,
+  &.au-button--disabled:hover,
+  /* stylelint-disable-next-line selector-class-pattern */
+  &.au-button--disabled:active {
+    color: var(--au-button-disabled-color);
+    cursor: not-allowed;
+    background-color: var(--au-button-disabled-bg-color);
+    border-color: var(--au-button-disabled-border-color);
+  }
+}

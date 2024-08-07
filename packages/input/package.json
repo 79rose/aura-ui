@@ -1,0 +1,51 @@
+{
+  "name": "@auraui/input",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "Aura",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79roseaura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79roseaura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/auraui-input.umd.js",
+  "module": "./dist/auraui-input.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-input.umd.js",
+      "import": "./dist/auraui-input.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@auraui/button": "workspace:^",
+    "@auraui/shared": "workspace:^"
+  }
+}

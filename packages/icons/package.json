@@ -1,0 +1,50 @@
+{
+  "name": "@auraui/icons",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "Aura",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79roseaura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79roseaura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/auraui-icons.umd.js",
+  "module": "./dist/auraui-icons.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-icons.umd.js",
+      "import": "./dist/auraui-icons.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./icons.css": "./dist/icons.css",
+    "./icons.json": "./dist/icons.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@auraui/icons": "file:",
+    "@iconify/tools": "^3.0.5",
+    "@iconify/utils": "^2.1.9"
+  }
+}

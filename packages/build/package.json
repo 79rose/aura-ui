@@ -1,0 +1,57 @@
+{
+  "name": "@auraui/build",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "Aura",
+  "license": "MIT",
+  "homepage": "https://github.com/79rose/aura-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/79roseaura-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/79roseaura-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/auraui-build.umd.js",
+  "module": "./dist/auraui-build.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/auraui-build.umd.js",
+      "import": "./dist/auraui-build.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "vite": ">=3.0.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@auraui/build": "file:",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "type-fest": "^4.1.0",
+    "typescript": "^5.1.6",
+    "vite-plugin-inspect": "^0.7.35"
+  }
+}
