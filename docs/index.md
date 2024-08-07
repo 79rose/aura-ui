@@ -29,5 +29,5 @@ hero:
       link: /playground
     - theme: alt
       text: Github
-      link: https://open.codehub.huawei.com/innersource/AuraUI/aura-ui/files?ref=master
+      link: https://github.com/79rose/aura-ui
 ---
